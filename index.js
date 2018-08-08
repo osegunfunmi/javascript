@@ -462,17 +462,51 @@
 
 
 // BuzzFizz
-const fuzzGame = (game) => {
-    for (let i = 1; i <= game; i++){
-        let game = "";
+// const fuzzGame = (game) => {
+//     for (let i = 1; i <= game; i++){
+//         let game = "";
 
-        if (i % 3 == 0) { game += "Fizz";}
-        if (i % 5 == 0) { game += "Buzz";}
-        if (game == "") {game = i;}
+//         if (i % 3 == 0) { game += "Fizz";}
+//         if (i % 5 == 0) { game += "Buzz";}
+//         if (game == "") {game = i;}
     
-        console.log(game);
-    };
+//         console.log(game);
+//     };
     
+// };
+
+// fuzzGame(30); 
+
+// const s1 = 'hello';
+// console.log(s1.toLocaleUpperCase());
+// console.log(typeof s1);
+
+// const s2 = new String('Hi bruv');
+// console.log(typeof s2);
+
+// console.log(window);
+// alert('why?');
+// console.log(navigator.appVersion);
+
+
+// object literal
+const book1 = {
+    title: 'High-Level Programming',
+    author: 'Arthur Ibik',
+    year: '2018',
+    getSummary: function() {
+        return `${this.title} was written by ${this.author} in ${this.year}`;
+    }
 };
 
-fuzzGame(30); 
+const book2 = {
+    title: 'Programming for Dummies',
+    author: 'Micheal E.I.',
+    year: '2012',
+    getSummary: function() {
+        return `${this.title} was written by ${this.author} in ${this.year}`;
+    }
+};
+// console.log(book2.getSummary());
+// console.log(Object.values(book1));
+// console.log(Object.keys(book2));
