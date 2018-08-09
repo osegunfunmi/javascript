@@ -5,10 +5,10 @@ function Book(title, author, year) {
     this.year = year;
     }
 
-    //  getSummary
+   //  getSummary
     Book.prototype.getSummary = function() {
         return `${this.title} was written by ${this.author} in ${this.year}`;
-    };
+    }; 
 
     // getAge
     Book.prototype.getAge = function (params) {

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Qoute master</title>
+</head>
+
+<body>
+
+    <div id="qoute_box">
+        <!-- I will display qoute -->
+    </div>
+
+    <script>
+        var qb = document.getElementById('qoute_box');
+        var qoutes = [
+            {
+                name: 'Arthur',
+                qoute: 'your problem is your problem',
+                year: 2018
+            }, 
+            {
+                name: 'Ebuka',
+                qoute: 'give me bread',
+                year: 2018
+            }, 
+            {
+                name: 'Segun',
+                qoute: 'girls are like mangoes',
+                year: 2018
+            }, 
+            {
+                name: 'Segun',
+                qoute: 'show me',
+                year: 2018
+            }, 
+            {
+                name: 'Chief',
+                qoute: 'How far na',
+                year: 2018
+            }
+        ];
+
+        function getQoute(arr){
+            var num = Math.floor(Math.random()* arr.length);
+
+            qb.innerHTML = `
+                <p>${arr[num].qoute}</p>
+                <strong>${arr[num].name}</strong> - ${arr[num].year}
+            `;
+            // console.log(arr[num]);     
+        }
+
+        function setQoute(qoute, name, year){
+            // validate the input before adding to the array
+            
+            if (typeof qoute == "string" && typeof name == "string" && typeof year == "number") {
+                qoutes.push({
+                    qoute: qoute,
+                    name: name,
+                    year: year
+                });
+
+                return true;
+            }
+
+            throw new Error('Invalid data type');
+        }
+        // callback function
+        function showQoute(){
+            getQoute(qoutes);
+            
+            setTimeout(function(){
+                showQoute();
+            }, 3000);
+        }
+        showQoute();
+
+
+
+
+// <!-- understanding callback function -->
+       // / global variable
+       var allUserData = [];
+
+// generic logStuff function that prints to console
+    function logStuff (userData) {
+        if ( typeof userData === "string")
+        {
+        console.log(userData);
+        }
+        else if ( typeof userData === "object")
+     {
+        for (var item in userData) {
+        console.log(item + ": " + userData[item]);
+        }
+
+    }
+
+}
+// A function that takes two parameters, the last one a callback function
+function getInput (options, callback) {
+    allUserData.push (options);
+    callback (options);
+
+}
+
+// When we call the getInput function, we pass logStuff as a parameter.
+// So logStuff will be the function that will called back (or executed) inside the getInput function
+getInput ({name:"Rich", speciality:"JavaScript"}, logStuff);
+//  name: Rich
+// speciality: JavaScript
+
+
+// !function() {
+//     alert("Hello from IIFE!");
+// }();
+// Shows the alert "Hello from IIFE!"
+    </script>
+
+    <!-- <script src="quote.js"></script> -->
+</body>
+</html>

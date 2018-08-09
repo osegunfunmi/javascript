@@ -24,7 +24,6 @@ class Magazine extends Book {
     }
 }
 
-// instantaiate Magazine
-
+// instantiate Magazine
 const mag1 = new Magazine('Flght Through JavaScript', 'Jerry Hopkins', '2011', 'Jan');
 console.log(mag1.getAge());

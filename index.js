@@ -510,3 +510,57 @@ const book2 = {
 // console.log(book2.getSummary());
 // console.log(Object.values(book1));
 // console.log(Object.keys(book2));
+
+
+//  method 1 to display random quote
+// var qb = document.getElementById('qoute_box');
+
+// var qoutes = ['qoute 1', 'qoute 2', 'qoute 3', 'qoute 4', 'qoute 5'];
+
+// var num = Math.floor(Math.random()* qoutes.length);
+
+// qb.innerText = qoutes[num];
+
+// console.log();
+
+
+//  method 2 to display random quote
+// const qoutes = ['qoute 1', 'qoute 2', 'qoute 3', 'qoute 4', 'qoute 5'];
+// var qb = document.getElementById('qoute_box');
+
+// function displayInterval (){
+    
+//     var num = Math.floor(Math.random()* qoutes.length);
+//     qb.innerText = qoutes[num];
+//     }
+
+//     displayInterval();
+
+// 
+//  method 13 to display random quote with timer
+  // function showQoute(){
+        //     var num = Math.floor(Math.random()* qoutes.length);
+
+        //     qb.innerText = qoutes[num];
+            
+        //     setTimeout(function(){
+        //         showQoute();
+        //     }, 5000);
+        // }
+        // showQoute();
+
+
+        // let friends = ["Mike", "Stacy", "Andy", "Rick"];
+
+        // friends.forEach(function (eachName, index){
+        // console.log(index + 1 + ". " + eachName); 
+        // });
+
+
+
+        // friends.forEach( function (eachName){
+        // console.log(eachName);
+        // });
+
+
+ 
